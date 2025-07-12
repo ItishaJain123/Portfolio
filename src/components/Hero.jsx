@@ -94,7 +94,7 @@ const Hero = () => {
                   href="https://mail.google.com/mail/?view=cm&to=jainitisha192@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-blue-600 transition-colors duration-300"
+                  className="text-[#2563EB] hover:text-blue-600 hover:text-underline transition-colors duration-300"
                 >
                   jainitisha192@gmail.com
                 </a>
