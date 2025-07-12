@@ -90,7 +90,14 @@ const Hero = () => {
             <div className="space-y-2 text-sm text-slate-600">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#2563EB]" />
-                <span className="break-all">jainitisha192@gmail.com</span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=jainitisha192@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-blue-600 transition-colors duration-300"
+                >
+                  jainitisha192@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[#2563EB]" />
