@@ -8,6 +8,7 @@ import {
   Database,
 } from "lucide-react";
 import { useEffect } from "react";
+import { Linkedin, Github } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -82,7 +83,7 @@ const Hero = () => {
                 "Designing Experiences, Not Just Interfaces." I bring ideas to
                 life through intuitive and visually captivating design. Let’s
                 create something meaningful, memorable, and beautifully
-                user-focused — together.
+                user-focused together.
               </p>
             </div>
 
@@ -106,6 +107,25 @@ const Hero = () => {
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#2563EB]" />
                 <span>Available for opportunities</span>
+              </div>
+
+              <div className="flex space-x-4 pt-6">
+                <a
+                  href="https://www.linkedin.com/in/itisha-jain/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center justify-center transition-transform hover:scale-110"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/ItishaJain123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800 hover:bg-slate-900 text-white rounded-md flex items-center justify-center transition-transform hover:scale-110"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
 

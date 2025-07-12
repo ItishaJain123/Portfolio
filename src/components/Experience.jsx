@@ -66,7 +66,8 @@ const Experience = () => {
   const education = [
     {
       degree: "BTech, Computer Science",
-      institution: "Prestige Institute (RGPV)",
+      institution:
+        "Prestige Institute of Engineering Management and Research (RGPV)",
       year: "2023",
       grade: "CGPA: 9.10 (Top 2%)",
       highlight: true,
