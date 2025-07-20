@@ -25,6 +25,26 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "expenseTracker",
+      title: "Expense Tracker",
+      description:
+        "A responsive Expense Tracker which helps you stay on top of your finances with real-time tracking of income, expenses, and balances.",
+      technologies: [
+        "React.js",
+        "Firebase",
+        "Tailwind.css",
+        "Recharts",
+        "Ant Design",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
+      video: "/project-videos/portfolio-demo.webm",
+      demoUrl: "https://smart-expense-app.vercel.app/",
+      githubUrl: "https://github.com/ItishaJain123/Expense-tracker",
+      category: "Portfolio",
+      year: "2024",
+    },
+    {
       id: "outfit-organizer",
       title: "Outfit Organizer",
       description:
@@ -38,20 +58,6 @@ const Projects = () => {
       githubUrl: "https://github.com/ItishaJain123/outfit-organizer",
       category: "Web Application",
       year: "2025",
-    },
-    {
-      id: "portfolio",
-      title: "Portfolio Website",
-      description:
-        "A responsive personal portfolio showcasing projects, skills, and professional experience.",
-      technologies: ["React.js", "Bootstrap", "Animate.css"],
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
-      video: "/project-videos/portfolio-demo.webm",
-      demoUrl: "https://itishajain123.github.io/personal-portfolio/",
-      githubUrl: "https://github.com/ItishaJain123/personal-portfolio",
-      category: "Portfolio",
-      year: "2024",
     },
     {
       id: "fab-wall",
