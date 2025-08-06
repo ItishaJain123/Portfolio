@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Recommendations from "./components/Recommendations";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
       <Recommendations />
       <Contact />
       <Footer />
+
+      <Chatbot />
     </div>
   );
 };

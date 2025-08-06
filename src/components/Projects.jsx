@@ -25,6 +25,20 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "mentai",
+      title: "Mentai",
+      description:
+        "Get AI-driven industry insights, quizzes for practise, resumes, & tailored cover letters instantly",
+      technologies: ["Next.js", "Shadcn UI", "Clerk", "Inngest"],
+      image:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop&crop=center",
+      video: "",
+      demoUrl: "https://mentai-ai-powered.vercel.app/",
+      githubUrl: "https://github.com/your-github/mentai",
+      category: "Web Application",
+      year: "2025",
+    },
+    {
       id: "expenseTracker",
       title: "Expense Tracker",
       description:
@@ -41,8 +55,8 @@ const Projects = () => {
       video: "/project-videos/portfolio-demo.webm",
       demoUrl: "https://smart-expense-app.vercel.app/",
       githubUrl: "https://github.com/ItishaJain123/Expense-tracker",
-      category: "Portfolio",
-      year: "2024",
+      category: "Web Application",
+      year: "2025",
     },
     {
       id: "outfit-organizer",
@@ -60,18 +74,18 @@ const Projects = () => {
       year: "2025",
     },
     {
-      id: "fab-wall",
-      title: "Fab Wall",
+      id: "mindmapper",
+      title: "MindMapper AI Summarizer",
       description:
-        "An interactive wallpaper browsing platform with advanced filtering and search capabilities.",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
+        "This Chrome extension allows users to summarize any selected text from a webpage and convert it into interactive, AI-generated mind maps or flowcharts, powered by Gemini API.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Gemini API"],
       image:
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop&crop=center",
       video: "/project-videos/fab-wall-demo.webm",
-      demoUrl: "https://itishajain123.github.io/Wallpaper/",
-      githubUrl: "https://github.com/ItishaJain123/Wallpaper",
-      category: "Web Application",
-      year: "2021",
+      demoUrl: "https://github.com/ItishaJain123/Mindmapper-AI-Extension",
+      githubUrl: "https://github.com/ItishaJain123/Mindmapper-AI-Extension",
+      category: "Chrome Extension",
+      year: "2025",
     },
   ];
 
@@ -89,7 +103,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}

@@ -42,7 +42,7 @@ const Skills = () => {
     {
       title: "Databases & Other",
       icon: "🗄️",
-      skills: ["MySQL", "PostgreSQL", "C++", "Syncfusion", "Drona HQ"],
+      skills: ["MySQL", "C++", "Syncfusion", "Drona HQ", "Firebase"],
     },
   ];
 
