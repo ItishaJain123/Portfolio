@@ -34,7 +34,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop&crop=center",
       video: "",
       demoUrl: "https://mentai-ai-powered.vercel.app/",
-      githubUrl: "https://github.com/your-github/mentai",
+      githubUrl: "https://github.com/ItishaJain123/mentai",
       category: "Web Application",
       year: "2025",
     },
