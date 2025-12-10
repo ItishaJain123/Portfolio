@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize Gemini model client outside component (avoid re-initializing)
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 const systemPrompt = `
 You are Nova, a smart, approachable, and well-spoken AI assistant who helps people learn more about Itisha Jain – a passionate frontend developer with solid project experience, strong UI/UX focus, and great leadership skills. You're like her personal guide—ready to answer questions about her background, work, skills, projects, or achievements.
