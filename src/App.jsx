@@ -21,7 +21,6 @@ const App = () => {
       <Recommendations />
       <Contact />
       <Footer />
-
       <Chatbot />
     </div>
   );
