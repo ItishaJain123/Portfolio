@@ -1,11 +1,5 @@
-import { useState } from "react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const navLinks = [
     "Home",
@@ -17,36 +11,37 @@ const Footer = () => {
     "Contact",
   ];
 
+  const scrollTo = (id) =>
+    document
+      .getElementById(id.toLowerCase())
+      ?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <footer className="bg-blue-500 border-t border-gray-200">
+    <footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Info */}
+          {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
-              <span className="text-black">Itisha </span>
-              <span className="text-white">Jain</span>
+              <span className="text-white">Itisha </span>
+              <span className="text-blue-400">Jain</span>
             </h3>
-            <p className="text-white leading-relaxed">
-              Frontend Developer passionate about creating clean, scalable, and
-              user-focused digital experiences.
+            <p className="text-slate-400 leading-relaxed text-sm">
+              Full Stack Software Developer passionate about building enterprise
+              platforms, AI-powered applications, and exceptional user
+              experiences.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-black">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
               {navLinks.map((item) => (
                 <button
                   key={item}
-                  onClick={() => {
-                    const element = document.getElementById(item.toLowerCase());
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="text-white hover:text-blue-600 text-left transition duration-300"
+                  onClick={() => scrollTo(item)}
+                  className="text-slate-400 hover:text-blue-400 text-left text-sm transition duration-200"
                 >
                   {item}
                 </button>
@@ -54,46 +49,47 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-black">Get In Touch</h4>
-            <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
+            <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <span className="text-lg">📍</span>
-                <span className="text-white">India</span>
+                <span>📍</span>
+                <span className="text-slate-400">India</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-lg">📧</span>
+                <span>📧</span>
                 <a
                   href="https://mail.google.com/mail/?view=cm&to=jainitisha192@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-blue-600 transition-colors duration-300"
+                  className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
                 >
                   jainitisha192@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-lg">💼</span>
-                <span className="text-white">Available for opportunities</span>
+                <span>💼</span>
+                <span className="text-slate-400">
+                  Available for opportunities
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white text-sm">
+        {/* Bottom */}
+        <div className="mt-12 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-slate-400 text-sm">
             © {currentYear} Itisha Jain. All rights reserved.
           </p>
-
-          <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <span className="text-white text-sm">
+          <div className="flex items-center space-x-6">
+            <span className="text-slate-500 text-sm">
               Built with React & Tailwind CSS
             </span>
             <button
-              onClick={scrollToTop}
-              className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition transform hover:scale-110"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-full transition transform hover:scale-110"
               aria-label="Scroll to top"
             >
               <svg

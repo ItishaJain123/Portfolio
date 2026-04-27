@@ -52,7 +52,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-10 bg-white text-slate-800 relative">
+    <section id="contact" className="py-10 bg-white text-slate-800 relative transition-colors duration-300">
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(30px); }

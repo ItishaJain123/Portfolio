@@ -11,7 +11,7 @@ import Chatbot from "./components/Chatbot";
 
 const App = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
       <Experience />
