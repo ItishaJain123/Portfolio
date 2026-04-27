@@ -13,10 +13,19 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const genAI = new GoogleGenerativeAI(
   import.meta.env.VITE_GEMINI_API_KEY?.trim(),
 );
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+const model = genAI.getGenerativeModel({
+  model: "gemini-3.1-flash-lite-preview",
+});
 
 const analyzerPrompt = (jd) => `
-You are a helpful recruiter assistant. Analyze how well Itisha Jain fits this job description.
+You are a helpful recruiter assistant.
+
+STEP 1 — VALIDATE INPUT:
+Look at the text under "Job Description:" below. If it is NOT a real job description (e.g., it is random characters, gibberish, a single word, a sentence unrelated to a job, or too short/vague to analyse), respond with EXACTLY this one line and nothing else:
+❌ This doesn't look like a job description. Please paste a real job posting to get an accurate analysis.
+
+STEP 2 — ANALYSE (only if input is a valid job description):
+Analyse how well Itisha Jain fits the role using the profile below.
 
 Itisha's Profile:
 - Full Stack Software Developer, 2+ years experience at Eazy ERP
@@ -75,15 +84,42 @@ const HireMeModal = ({ isOpen, onClose }) => {
 
   const handleAnalyze = async () => {
     if (!jd.trim() || isLoading) return;
+
+    if (/--yash\s*$/i.test(jd.trim())) {
+      setResult(
+        `🥚 Yash ki girlfriend hai Itisha 💙\n\nAnd she loves him the most. 🫶`,
+      );
+      setTab("result");
+      return;
+    }
+
+    const wordCount = jd.trim().split(/\s+/).length;
+    if (wordCount < 10) {
+      setError(
+        "Please paste a proper job description (at least a few sentences).",
+      );
+      return;
+    }
+
     setIsLoading(true);
     setResult(null);
     setError(null);
     try {
       const res = await model.generateContent(analyzerPrompt(jd.trim()));
-      setResult(res.response.text());
+      const text = res.response.text();
+      setResult(text);
       setTab("result");
     } catch (err) {
-      setError("Could not analyze. Check your API key or try again.");
+      const msg = err?.message || "";
+      if (msg.includes("API_KEY") || msg.includes("403")) {
+        setError(
+          "API key error — please check your Gemini API key configuration.",
+        );
+      } else if (msg.includes("429") || msg.includes("quota")) {
+        setError("Rate limit reached. Please wait a moment and try again.");
+      } else {
+        setError("Analysis failed. Please try again in a moment.");
+      }
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -91,6 +127,20 @@ const HireMeModal = ({ isOpen, onClose }) => {
   };
 
   const formatResult = (text) => {
+    if (text.startsWith("🥚")) {
+      const [line1, , line2] = text.split("\n");
+      return (
+        <div className="text-center py-6 space-y-3">
+          <p className="text-4xl">💙🥚💙</p>
+          <p className="text-xl font-bold text-pink-600">
+            {line1.replace("🥚 ", "")}
+          </p>
+          <p className="text-slate-500 text-sm">{line2}</p>
+        </div>
+      );
+    }
+    if (text.startsWith("❌"))
+      return <p className="text-red-600 font-medium text-sm">{text}</p>;
     return text.split("\n").map((line, i) => {
       if (line.startsWith("🎯"))
         return (

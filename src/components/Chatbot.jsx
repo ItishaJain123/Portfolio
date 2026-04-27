@@ -5,7 +5,9 @@ import { X, Send, Sparkles } from "lucide-react";
 const genAI = new GoogleGenerativeAI(
   import.meta.env.VITE_GEMINI_API_KEY?.trim(),
 );
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+const model = genAI.getGenerativeModel({
+  model: "gemini-3.1-flash-lite-preview",
+});
 
 const SYSTEM_PROMPT = `
 You are Nova — Itisha Jain's personal AI assistant on her portfolio website. You're witty, warm, and extremely knowledgeable about Itisha. Your job is to impress recruiters, collaborators, and fellow developers who visit the portfolio.
@@ -274,10 +276,10 @@ const Chatbot = () => {
           </div>
 
           {/* Suggestion chips */}
-          {messages.length <= 2 && !isLoading && (
+          {!isLoading && (
             <div
               className="px-3 py-2 flex gap-2 overflow-x-auto border-t border-[#1e2a3a] bg-[#0d1117] flex-shrink-0"
-              style={{ scrollbarWidth: "none" }}
+              style={{ scrollbarWidth: "thin", scrollbarColor: "#1e2a3a transparent" }}
             >
               {SUGGESTIONS.map(([icon, text]) => (
                 <button
