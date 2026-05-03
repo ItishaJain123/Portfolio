@@ -75,6 +75,30 @@
 .typing-dot:nth-child(2) { animation-delay: 0.2s; }
 .typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
+/* Blob drift animations */
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(50px, -40px) scale(1.08); }
+  66%       { transform: translate(-30px, 25px) scale(0.95); }
+}
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(-40px, 50px) scale(1.05); }
+  66%       { transform: translate(30px, -30px) scale(1.1); }
+}
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50%       { transform: translate(35px, 35px) scale(1.06); }
+}
+@keyframes spin-gradient {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.blob-drift-1 { animation: blob-drift-1 10s ease-in-out infinite; }
+.blob-drift-2 { animation: blob-drift-2 13s ease-in-out infinite; }
+.blob-drift-3 { animation: blob-drift-3 8s ease-in-out infinite; }
+.spin-gradient { animation: spin-gradient 4s linear infinite; }
+
 /* Toast */
 @keyframes slideUpFade {
   from { opacity: 0; transform: translateY(10px); }

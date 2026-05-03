@@ -84,7 +84,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-slate-900">Contact</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 mb-6 rounded-full"></div>
           <p className="max-w-xl mx-auto text-slate-600 text-lg">
-            Let’s build something amazing together. Reach out for collaboration
+            Let's build something amazing together. Reach out for collaboration
             or project inquiries.
           </p>
         </div>
@@ -96,7 +96,7 @@ const Contact = () => {
               Get In Touch
             </h3>
             <p className="text-slate-600 mb-6">
-              I’m open to freelance opportunities and collaborations. Feel free
+              I'm open to freelance opportunities and collaborations. Feel free
               to contact me via the form or social platforms.
             </p>
 

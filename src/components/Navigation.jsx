@@ -60,7 +60,6 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-
           </div>
 
           {/* Mobile hamburger */}

@@ -53,7 +53,14 @@ const Hero = () => {
         id="home"
         className="min-h-screen bg-white pt-24 sm:pt-28 relative overflow-hidden transition-colors duration-300"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-2">
+        {/* Animated mesh blobs */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="blob-drift-1 absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-300/25 rounded-full blur-3xl" />
+          <div className="blob-drift-2 absolute top-1/2 right-1/4 w-[420px] h-[420px] bg-purple-300/20 rounded-full blur-3xl" />
+          <div className="blob-drift-3 absolute bottom-1/4 left-1/3 w-[360px] h-[360px] bg-pink-300/15 rounded-full blur-3xl" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-2 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
             {/* Content */}
@@ -163,11 +170,25 @@ const Hero = () => {
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2 gsap-hero-image">
               <div className="relative">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 relative">
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-8 border-blue-100 shadow-2xl">
+                {/* Rotating gradient ring photo */}
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                  {/* Spinning conic gradient ring — extends 5px outside the photo */}
+                  <div
+                    className="spin-gradient absolute rounded-full"
+                    style={{
+                      inset: "-5px",
+                      background: "conic-gradient(from 0deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6)",
+                    }}
+                  />
+                  {/* White gap between ring and photo */}
+                  <div className="absolute rounded-full bg-white" style={{ inset: "-1px" }} />
+                  {/* Photo */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
                     <img src="/Ishu.jpeg" alt="Itisha Jain" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
+
+                {/* Floating icon badges */}
                 <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-lg border border-slate-200">
                   <Code className="w-6 h-6 text-[#2563EB]" />
                 </div>

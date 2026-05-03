@@ -4,13 +4,41 @@ export const projects = [
     title: "MedDoc-AI",
     description:
       "Full Stack GenAI medical document assistant — RAG platform on LangChain & Gemini for medical PDF ingestion, Q&A, and health metric extraction.",
-    technologies: ["Node.js", "LangChain", "Gemini API", "PostgreSQL", "Prisma", "Express", "Clerk"],
+    technologies: [
+      "Node.js",
+      "LangChain",
+      "Gemini API",
+      "PostgreSQL",
+      "Prisma",
+      "Express",
+      "Clerk",
+    ],
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&fit=crop&crop=center",
     video: "",
-    demoUrl: "https://github.com/ItishaJain123",
+    demoUrl: "https://meddoc-ai.vercel.app/",
     githubUrl: "https://github.com/ItishaJain123",
     category: "GenAI / Full Stack",
+    year: "2026",
+  },
+  {
+    id: "expenseTracker",
+    title: "Expense Tracker",
+    description:
+      "A responsive finance dashboard with real-time tracking of income, expenses, and balances using Firebase and Recharts.",
+    technologies: [
+      "React.js",
+      "Firebase",
+      "Tailwind CSS",
+      "Recharts",
+      "Ant Design",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
+    video: "/project-videos/portfolio-demo.webm",
+    demoUrl: "https://smart-expense-app.vercel.app/",
+    githubUrl: "https://github.com/ItishaJain123/Expense-tracker",
+    category: "Web Application",
     year: "2026",
   },
   {
@@ -36,22 +64,8 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop&crop=center",
     video: "/project-videos/outfit-organizer-demo.webm",
-    demoUrl: "https://itishajain123.github.io/outfit-organizer",
+    demoUrl: "https://outfit-organizer.vercel.app/",
     githubUrl: "https://github.com/ItishaJain123/outfit-organizer",
-    category: "Web Application",
-    year: "2025",
-  },
-  {
-    id: "expenseTracker",
-    title: "Expense Tracker",
-    description:
-      "A responsive finance dashboard with real-time tracking of income, expenses, and balances using Firebase and Recharts.",
-    technologies: ["React.js", "Firebase", "Tailwind CSS", "Recharts", "Ant Design"],
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
-    video: "/project-videos/portfolio-demo.webm",
-    demoUrl: "https://smart-expense-app.vercel.app/",
-    githubUrl: "https://github.com/ItishaJain123/Expense-tracker",
     category: "Web Application",
     year: "2025",
   },
