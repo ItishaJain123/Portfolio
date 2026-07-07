@@ -19,7 +19,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&fit=crop&crop=center",
     video: "",
     demoUrl: "https://meddoc-ai.vercel.app/",
-    githubUrl: "https://github.com/ItishaJain123",
+    githubUrl: "https://github.com/ItishaJain123/meddoc-ai",
     category: "GenAI / Full Stack",
     year: "2026",
     caseStudy: {
@@ -103,8 +103,8 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=250&fit=crop&crop=center",
     video: "",
-    demoUrl: "https://github.com/ItishaJain123",
-    githubUrl: "https://github.com/ItishaJain123",
+    demoUrl: "https://stylegenie-alpha.vercel.app/",
+    githubUrl: "https://github.com/ItishaJain123/stylegenie",
     category: "GenAI / Full Stack",
     year: "2026",
     caseStudy: {

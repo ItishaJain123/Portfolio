@@ -72,7 +72,8 @@ const ProjectCard = ({ project, index, onOpenCase }) => {
           </video>
         )}
 
-        {/* Hover action overlay */}
+        {/* Hover action overlay — only when there's at least one link */}
+        {(project.demoUrl || project.githubUrl) && (
         <div
           className="absolute inset-0 flex items-center justify-center gap-3 transition-all duration-300"
           style={{
@@ -81,27 +82,32 @@ const ProjectCard = ({ project, index, onOpenCase }) => {
             opacity: hovered ? 1 : 0,
           }}
         >
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-transform duration-200 hover:scale-105"
-            style={{ background: "#ffffff", color: "#1e293b" }}
-          >
-            <ExternalLink className="w-4 h-4" />
-            Live Demo
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-transform duration-200 hover:scale-105"
-            style={{ background: "#1e293b", color: "#ffffff" }}
-          >
-            <Github className="w-4 h-4" />
-            GitHub
-          </a>
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-transform duration-200 hover:scale-105"
+              style={{ background: "#ffffff", color: "#1e293b" }}
+            >
+              <ExternalLink className="w-4 h-4" />
+              Live Demo
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-transform duration-200 hover:scale-105"
+              style={{ background: "#1e293b", color: "#ffffff" }}
+            >
+              <Github className="w-4 h-4" />
+              GitHub
+            </a>
+          )}
         </div>
+        )}
 
         {/* Category badge */}
         <div className="absolute top-3 left-3">
@@ -167,27 +173,33 @@ const ProjectCard = ({ project, index, onOpenCase }) => {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex gap-3 pt-2">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl text-white transition-opacity duration-200 hover:opacity-85"
-            style={{ background: s.gradient }}
-          >
-            <ExternalLink className="w-3.5 h-3.5" />
-            Live Demo
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl border border-slate-200 text-slate-600 transition-all duration-200 hover:border-slate-400 hover:bg-slate-50"
-          >
-            <Github className="w-3.5 h-3.5" />
-            Source Code
-          </a>
-        </div>
+        {(project.demoUrl || project.githubUrl) && (
+          <div className="flex gap-3 pt-2">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl text-white transition-opacity duration-200 hover:opacity-85"
+                style={{ background: s.gradient }}
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                Live Demo
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl border border-slate-200 text-slate-600 transition-all duration-200 hover:border-slate-400 hover:bg-slate-50"
+              >
+                <Github className="w-3.5 h-3.5" />
+                Source Code
+              </a>
+            )}
+          </div>
+        )}
 
         {/* Case study button */}
         {project.caseStudy && (
@@ -305,25 +317,31 @@ const CaseStudyModal = ({ project, onClose }) => {
         </div>
 
         {/* Footer CTAs */}
-        <div className="flex gap-3 px-6 py-4 border-t border-slate-100 bg-slate-50">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl text-white transition-opacity hover:opacity-90"
-            style={{ background: s.gradient }}
-          >
-            <ExternalLink className="w-3.5 h-3.5" /> Live Demo
-          </a>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl border border-slate-200 text-slate-600 transition hover:bg-white"
-          >
-            <Github className="w-3.5 h-3.5" /> Source Code
-          </a>
-        </div>
+        {(project.demoUrl || project.githubUrl) && (
+          <div className="flex gap-3 px-6 py-4 border-t border-slate-100 bg-slate-50">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl text-white transition-opacity hover:opacity-90"
+                style={{ background: s.gradient }}
+              >
+                <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-2.5 rounded-xl border border-slate-200 text-slate-600 transition hover:bg-white"
+              >
+                <Github className="w-3.5 h-3.5" /> Source Code
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -267,7 +267,7 @@ const Hero = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-6 max-w-sm sm:max-w-md">
-                {[["2+", "Years Experience"], ["10+", "Projects Done"], ["100%", "Client Satisfaction"]].map(([val, label]) => (
+                {[["2+", "Years Experience"], ["6", "Enterprise Modules"], ["9.1", "CGPA · Top 2%"]].map(([val, label]) => (
                   <div key={label} className="text-center">
                     <div className="text-xl font-bold text-[#2563EB]">{val}</div>
                     <div className="text-sm text-slate-500">{label}</div>
