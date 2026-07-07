@@ -107,3 +107,60 @@
 .toast-enter {
   animation: slideUpFade 0.3s ease-out forwards;
 }
+
+/* Floating code symbols in Hero */
+@keyframes float-code {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(2deg); }
+  66%       { transform: translateY(5px) rotate(-1deg); }
+}
+.float-code {
+  animation: float-code var(--dur, 7s) ease-in-out infinite;
+}
+
+/* Tech-stack marquee in Hero */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Nova-driven section spotlight — used when the chatbot navigates the UI */
+@keyframes nova-spotlight {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  15%  { box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.55), 0 0 60px 8px rgba(37, 99, 235, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+.nova-highlight {
+  animation: nova-spotlight 2.4s ease-out;
+  border-radius: 1rem;
+  scroll-margin-top: 6rem;
+}
+
+/* Nova proactive nudge bubble */
+@keyframes nova-nudge-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.nova-nudge {
+  animation: nova-nudge-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Konami easter egg — spin the hero photo */
+@keyframes konami-spin {
+  0%   { transform: rotate(0deg)   scale(1);    }
+  50%  { transform: rotate(360deg) scale(1.12); }
+  100% { transform: rotate(720deg) scale(1);    }
+}
+.konami-spin {
+  animation: konami-spin 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.konami-toast {
+  animation: nova-nudge-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

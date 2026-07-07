@@ -10,13 +10,27 @@
     />
     <meta name="author" content="Itisha Jain" />
 
-    <!-- Google Fonts -->
+    <!-- Favicon (reuses existing asset to avoid a 404) -->
+    <link rel="icon" type="image/jpeg" href="/Ishu.jpeg" />
+
+    <!-- Preload the LCP hero image for a faster Largest Contentful Paint -->
+    <link rel="preload" as="image" href="/Ishu.jpeg" fetchpriority="high" />
+
+    <!-- Google Fonts (loaded non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <meta name="keywords" content="Itisha Jain, Frontend Developer, React Developer, UI/UX, JavaScript, Tailwind CSS, Portfolio" />
     <meta name="robots" content="index, follow" />

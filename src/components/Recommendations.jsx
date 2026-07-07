@@ -17,7 +17,7 @@ const Recommendations = () => {
   };
 
   return (
-    <section id="recommendations" className="py-10 bg-white px-6 relative transition-colors duration-300">
+    <section id="recommendations" className="py-16 bg-white px-6 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold text-slate-900 mb-2">LinkedIn Recommendations</h2>

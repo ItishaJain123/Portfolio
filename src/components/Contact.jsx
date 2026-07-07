@@ -52,7 +52,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-10 bg-white text-slate-800 relative transition-colors duration-300">
+    <section id="contact" className="py-16 bg-white text-slate-800 relative transition-colors duration-300">
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(30px); }
@@ -141,6 +141,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/itisha-jain/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Itisha Jain on LinkedIn"
                 className="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center justify-center transition-transform hover:scale-110"
               >
                 <Linkedin className="w-5 h-5" />
@@ -149,6 +150,7 @@ const Contact = () => {
                 href="https://github.com/ItishaJain123"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Itisha Jain on GitHub"
                 className="w-10 h-10 bg-slate-800 hover:bg-slate-900 text-white rounded-md flex items-center justify-center transition-transform hover:scale-110"
               >
                 <Github className="w-5 h-5" />
