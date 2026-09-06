@@ -14,7 +14,7 @@ const genAI = new GoogleGenerativeAI(
   import.meta.env.VITE_GEMINI_API_KEY?.trim(),
 );
 const model = genAI.getGenerativeModel({
-  model: "gemini-3.1-flash-lite-preview",
+  model: "gemini-3.8-flash-lite-preview",
 });
 
 const analyzerPrompt = (jd) => `

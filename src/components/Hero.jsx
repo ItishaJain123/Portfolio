@@ -11,18 +11,6 @@ const GenerateIntro = lazy(() => import("./GenerateIntro"));
 const EMAIL = "jainitisha192@gmail.com";
 const ROLES = ["Full Stack Software Developer", "GenAI Engineer", "React Specialist", "Frontend Architect"];
 
-const FLOAT_SYMBOLS = [
-  { text: "</>",   top: "12%", left: "6%",  delay: "0s",   dur: "7s"  },
-  { text: "{}",    top: "28%", left: "90%", delay: "1.5s", dur: "9s"  },
-  { text: "=>",    top: "62%", left: "4%",  delay: "2s",   dur: "8s"  },
-  { text: "()",    top: "78%", left: "85%", delay: "0.5s", dur: "6s"  },
-  { text: "//",    top: "45%", left: "93%", delay: "3s",   dur: "7.5s"},
-  { text: "[]",    top: "18%", left: "72%", delay: "1s",   dur: "8.5s"},
-  { text: "&&",    top: "55%", left: "10%", delay: "2.5s", dur: "6.5s"},
-  { text: "async", top: "38%", left: "87%", delay: "4s",   dur: "10s" },
-  { text: "const", top: "85%", left: "22%", delay: "3.5s", dur: "9s"  },
-];
-
 const TECH_STACK = [
   "⚛️ React 19", "▲ Next.js", "🔷 TypeScript", "🔴 Redux Toolkit", "💨 Tailwind CSS",
   "🎨 ShadcnUI", "🟢 Node.js", "🚂 Express 5", "⚡ REST APIs", "🔌 WebSockets",
@@ -119,32 +107,14 @@ const Hero = () => {
         id="home"
         className="min-h-screen bg-white pt-24 sm:pt-28 relative overflow-hidden transition-colors duration-300"
       >
-        {/* Animated mesh blobs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="blob-drift-1 absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-300/25 rounded-full blur-3xl" />
-          <div className="blob-drift-2 absolute top-1/2 right-1/4 w-[420px] h-[420px] bg-purple-300/20 rounded-full blur-3xl" />
-          <div className="blob-drift-3 absolute bottom-1/4 left-1/3 w-[360px] h-[360px] bg-pink-300/15 rounded-full blur-3xl" />
-        </div>
-
-        {/* Floating code symbols */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-          {FLOAT_SYMBOLS.map((sym, i) => (
-            <div
-              key={i}
-              className="absolute font-mono font-bold text-[#2563EB] float-code"
-              style={{
-                top: sym.top,
-                left: sym.left,
-                opacity: 0.07,
-                fontSize: "clamp(0.85rem, 2vw, 1.3rem)",
-                animationDelay: sym.delay,
-                "--dur": sym.dur,
-              }}
-            >
-              {sym.text}
-            </div>
-          ))}
-        </div>
+        {/* Subtle single-tone wash for depth (replaces the busy blobs) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(60% 50% at 70% 15%, rgba(37,99,235,0.06) 0%, transparent 70%)",
+          }}
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-2 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

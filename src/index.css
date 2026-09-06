@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* ── Typography system ───────────────────────────────
+   Inter for body, Space Grotesk for display headings. */
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+h1, h2, h3, h4, .font-display {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -97,7 +107,7 @@
 .blob-drift-1 { animation: blob-drift-1 10s ease-in-out infinite; }
 .blob-drift-2 { animation: blob-drift-2 13s ease-in-out infinite; }
 .blob-drift-3 { animation: blob-drift-3 8s ease-in-out infinite; }
-.spin-gradient { animation: spin-gradient 4s linear infinite; }
+.spin-gradient { animation: spin-gradient 9s linear infinite; }
 
 /* Toast */
 @keyframes slideUpFade {

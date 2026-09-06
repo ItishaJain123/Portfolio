@@ -75,12 +75,6 @@ const About = () => {
 
   return (
     <section id="about" className="py-16 bg-white relative overflow-hidden transition-colors duration-300">
-      {/* Subtle background blobs matching Hero */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="blob-drift-2 absolute top-0 right-0 w-[400px] h-[400px] bg-blue-200/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
-        <div className="blob-drift-3 absolute bottom-0 left-0 w-[350px] h-[350px] bg-purple-200/15 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Heading */}
         <div className="text-center mb-12 animate-fade-up">

@@ -1,9 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY?.trim());
+const genAI = new GoogleGenerativeAI(
+  import.meta.env.VITE_GEMINI_API_KEY?.trim(),
+);
 
 export const model = genAI.getGenerativeModel({
-  model: "gemini-3.1-flash-lite-preview",
+  model: "gemini-3.8-flash-lite-preview",
 });
 
 // Single source of truth for everything the AI features know about Itisha.

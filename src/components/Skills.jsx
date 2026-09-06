@@ -99,21 +99,6 @@ const Skills = () => {
         }}
       />
 
-      {/* Twinkling dots */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {[...Array(40)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-[2px] h-[2px] bg-[#2563EB] opacity-20 rounded-full animate-twinkle"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${2 + Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Section header */}
       <div className="relative z-10 text-center mb-10 animate-fade-up">
         <h2 className="text-4xl font-bold text-slate-900 mb-2">Technical Skills</h2>
